@@ -1,0 +1,76 @@
+a.menu-link {
+	-webkit-transition: all 1s ease-out;
+	-moz-transition: all 1s ease-out;
+	-ms-transition: all 1s ease-out;
+	-o-transition: all 1s ease-out;
+	transition: all 1s ease-out;
+  	position: fixed;
+  	top: 0;
+  	right: 0;
+	display: block;
+	padding: 1rem;
+	padding-top: 1.5rem;
+}
+
+header nav {
+	background:#525F89;
+	/*background:#3498db;*/
+	margin-bottom:10px;
+}
+header nav ul {
+	list-style: none;
+	overflow: hidden;
+}
+header nav ul li a {
+	display: block;
+	/*padding:20px;*/
+	color:#fff;
+	text-decoration: none;
+}
+header nav ul li a:hover {
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+	background:#FFF;
+	color: #000;
+
+}
+
+nav[role=navigation] {
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.js nav[role=navigation] {
+	overflow: hidden;
+	max-height: 0;
+}
+
+/* 2 REM DEL NAV QUE ES EL CONTENEDOR + 3REM POR CADA ENLACE */
+nav[role=navigation].active {
+	max-height: 23rem;
+
+}
+
+nav[role=navigation] ul { border-top: thin solid #808080; }
+
+nav[role=navigation] li { border-bottom: thin solid #808080; }
+
+@media screen and (min-width: 48em) {
+	a.menu-link { display: none; }
+
+	.js nav[role=navigation] { max-height: none; }
+
+	nav[role=navigation] ul { border: 0; }
+
+	nav[role=navigation]  li {
+		display: inline-block;
+		border: 0;
+	}
+
+}
